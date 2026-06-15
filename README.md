@@ -5,7 +5,7 @@
 
 ## Overview
 This project is develop to help the community learn java on android.
-You can build and run Java file with JDK 1.7.
+You can build and run Java file with JDK 1.8.
 
 Download in Google Play Store
 
@@ -15,7 +15,7 @@ target="_blank">
 alt="IMAGE ALT TEXT HERE" width="200"/></a>
 
 ## Todo
-1. Java compiler JDK 1.7 &#10004;
+1. Java compiler JDK 1.8 &#10004;
 2. Java editor &#10004;
 3. Java auto complete code &#10004; (But not working perfect)
 4. Java debugger (jdb).
@@ -73,4 +73,3 @@ an issue. Pull request are greatly appreciated.
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
-

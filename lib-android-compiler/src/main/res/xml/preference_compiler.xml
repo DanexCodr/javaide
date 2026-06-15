@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="Java options">
         <ListPreference
-            android:defaultValue="1.7"
+            android:defaultValue="1.8"
             android:entries="@array/entries_java_versions"
             android:entryValues="@array/entries_java_versions"
             android:key="@string/key_pref_source_compatibility"
@@ -10,7 +10,7 @@
 
         </ListPreference>
         <ListPreference
-            android:defaultValue="1.7"
+            android:defaultValue="1.8"
             android:entries="@array/entries_java_versions"
             android:entryValues="@array/entries_java_versions"
             android:key="@string/key_pref_target_compatibility"

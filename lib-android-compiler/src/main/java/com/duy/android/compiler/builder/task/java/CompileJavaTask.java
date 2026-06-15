@@ -43,14 +43,14 @@ public class CompileJavaTask extends Task<JavaProject> {
 
         String sourceCompatibility = pref.getString(context.getString(R.string.key_pref_source_compatibility), null);
         if (sourceCompatibility == null || sourceCompatibility.isEmpty()) {
-            sourceCompatibility = JavaVersion.VERSION_1_7.toString();
+            sourceCompatibility = JavaVersion.VERSION_1_8.toString();
         }
         mCompileOptions.setSourceCompatibility(sourceCompatibility);
 
 
         String targetCompatibility = pref.getString(context.getString(R.string.key_pref_target_compatibility), null);
         if (targetCompatibility == null || targetCompatibility.isEmpty()) {
-            targetCompatibility = JavaVersion.VERSION_1_7.toString();
+            targetCompatibility = JavaVersion.VERSION_1_8.toString();
         }
         mCompileOptions.setTargetCompatibility(targetCompatibility);
 
@@ -115,7 +115,11 @@ public class CompileJavaTask extends Task<JavaProject> {
         if (!parent.exists()) {
             return;
         }
-        for (File child : parent.listFiles()) {
+        File[] children = parent.listFiles();
+        if (children == null) {
+            return;
+        }
+        for (File child : children) {
             if (child.isDirectory()) {
                 getAllSourceFiles(toAdd, child);
             } else if (child.exists() && child.isFile()) {

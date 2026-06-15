@@ -38,7 +38,7 @@ public class CompileOptions {
      * Default Java version that will be used if the source and target compatibility levels will
      * not be set explicitly.
      */
-    private JavaVersion defaultJavaVersion = JavaVersion.VERSION_1_6;
+    private JavaVersion defaultJavaVersion = JavaVersion.VERSION_1_8;
 
     private boolean ndkCygwinMode = false;
 
