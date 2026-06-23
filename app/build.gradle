@@ -32,7 +32,6 @@ android {
         }
     }
 
-    // Map for the version code that gives each ABI a value.
     applicationVariants.all { variant ->
         Properties props = new Properties()
         def propFile = new File(rootProject.projectDir, "signing.properties")
@@ -93,7 +92,6 @@ dependencies {
     api project(':lib-google-java-format')
     api project(':androidlogcat')
     api project(':common')
-
     api project(':lib-n-ide-release-10')
 
     //firebase sdk
@@ -102,18 +100,25 @@ dependencies {
 
     api 'io.github.kobakei:ratethisapp:1.2.0'
     
-    // UPDATED: Use GitHub versions instead of missing JCenter versions
-    api 'com.github.amulyakhare:TextDrawable:1.0.1'  // ← CHANGED
-    api 'com.github.miguelcatalan:materialsearchview:1.4.0'  // ← CHANGED
+    // OPTION 1: Try the original group IDs with mavenCentral()
+    // api 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'  // ← Try this first
+    // api 'com.miguelcatalan:materialsearchview:1.4.0'  // ← Try this first
+    
+    // OPTION 2: Use JitPack format (if Option 1 fails)
+    api 'com.github.amulyakhare:TextDrawable:1.0.1'
+    api 'com.github.miguelcatalan:materialsearchview:1.4.0'
+    
+    // OPTION 3: Use alternatives (if both above fail)
+    // api 'com.github.QuadFlask:colorpicker:0.0.13'  // Alternative for TextDrawable
+    // api 'com.github.arimorty:floatingsearchview:2.1.1'  // Alternative for MaterialSearchView
 
     /*Lib n-ide*/
     api 'com.google.code.gson:gson:2.8.1'
     api 'com.anjlab.android.iab.v3:library:1.0.44'
     api 'org.apmem.tools:layouts:1.10@aar'
     api 'com.makeramen:roundedimageview:2.2.1'
-    // REMOVED: com.yqritc:recyclerview-flexibledivider - using built-in Android instead
+    // REMOVED: com.yqritc:recyclerview-flexibledivider
     api 'com.sothree.slidinguppanel:library:3.4.0'
-    //noinspection GradleDependency newer version cause crash
     api ('commons-io:commons-io:2.3'){
         transitive = true
     }
