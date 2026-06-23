@@ -100,17 +100,9 @@ dependencies {
 
     api 'io.github.kobakei:ratethisapp:1.2.0'
     
-    // OPTION 1: Try the original group IDs with mavenCentral()
-    // api 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'  // ← Try this first
-    // api 'com.miguelcatalan:materialsearchview:1.4.0'  // ← Try this first
-    
-    // OPTION 2: Use JitPack format (if Option 1 fails)
-    api 'com.github.amulyakhare:TextDrawable:1.0.1'
-    api 'com.github.miguelcatalan:materialsearchview:1.4.0'
-    
-    // OPTION 3: Use alternatives (if both above fail)
-    // api 'com.github.QuadFlask:colorpicker:0.0.13'  // Alternative for TextDrawable
-    // api 'com.github.arimorty:floatingsearchview:2.1.1'  // Alternative for MaterialSearchView
+    // FIXED: Use Maven Central versions
+    api 'com.amulyakhare:TextDrawable:1.0.1'
+    api 'com.miguelcatalan:materialsearchview:1.4.0'
 
     /*Lib n-ide*/
     api 'com.google.code.gson:gson:2.8.1'
@@ -119,7 +111,7 @@ dependencies {
     api 'com.makeramen:roundedimageview:2.2.1'
     // REMOVED: com.yqritc:recyclerview-flexibledivider
     api 'com.sothree.slidinguppanel:library:3.4.0'
-    api ('commons-io:commons-io:2.3'){
+    api ('commons-io:commons-io:2.3') {
         transitive = true
     }
 
