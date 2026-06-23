@@ -1,6 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
+        mavenCentral()  // ← ADDED
         jcenter()
         maven { url 'https://maven.fabric.io/public' }
         maven { url "https://maven.google.com" }
@@ -15,6 +16,7 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()  // ← ADDED
         maven { url 'https://dl.bintray.com/ppartisan/maven/' }
         maven { url "https://clojars.org/repo/" }
         maven { url "https://jitpack.io" }
@@ -24,7 +26,6 @@ allprojects {
     }
 }
 
-
 ext {
     compileSdkVersion = 27
     buildToolsVersion = '27.0.3'
@@ -33,4 +34,3 @@ ext {
     googleServiceVersion = "15.0.2"
     supportLibVersion = "27.1.1"
 }
-
