@@ -70,7 +70,6 @@ android {
     }
 }
 
-
 configurations {
     all {
         exclude group: 'commons-logging', module: 'commons-logging'
@@ -102,14 +101,17 @@ dependencies {
     api 'com.crashlytics.sdk.android:crashlytics:2.9.3'
 
     api 'io.github.kobakei:ratethisapp:1.2.0'
-    api 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
-    api 'com.miguelcatalan:materialsearchview:1.4.0'
+    
+    // UPDATED: Use GitHub versions instead of missing JCenter versions
+    api 'com.github.amulyakhare:TextDrawable:1.0.1'  // ← CHANGED
+    api 'com.github.miguelcatalan:materialsearchview:1.4.0'  // ← CHANGED
 
     /*Lib n-ide*/
     api 'com.google.code.gson:gson:2.8.1'
     api 'com.anjlab.android.iab.v3:library:1.0.44'
     api 'org.apmem.tools:layouts:1.10@aar'
     api 'com.makeramen:roundedimageview:2.2.1'
+    // REMOVED: com.yqritc:recyclerview-flexibledivider - using built-in Android instead
     api 'com.sothree.slidinguppanel:library:3.4.0'
     //noinspection GradleDependency newer version cause crash
     api ('commons-io:commons-io:2.3'){
