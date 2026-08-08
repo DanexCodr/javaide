@@ -17,7 +17,7 @@
 package com.android.build.gradle.api;
 
 import com.android.annotations.NonNull;
-import com.android.build.gradle.api.VariantOutput;
+import com.android.build.VariantOutput;
 
 import java.io.File;
 
