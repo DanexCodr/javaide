@@ -14,18 +14,25 @@
  * limitations under the License.
  */
 
-package com.android.build.gradle.api;
+package com.android.builder.model;
 
 import com.android.annotations.NonNull;
-import com.android.build.VariantOutput;
+import com.android.build.OutputFile;
 
 import java.io.File;
+import java.util.Collection;
 
 /**
  * The Actual output for a {@link AndroidArtifact}, which can be one file at the minimum or
  * several APKs in case of pure splits configuration.
  */
-public interface AndroidArtifactOutput extends VariantOutput {
+public interface AndroidArtifactOutput {
+
+    @NonNull
+    OutputFile getMainOutputFile();
+
+    @NonNull
+    Collection<OutputFile> getOutputs();
 
     /**
      * Returns the name of the task used to generate this artifact output.
@@ -40,4 +47,9 @@ public interface AndroidArtifactOutput extends VariantOutput {
      */
     @NonNull
     File getGeneratedManifest();
+
+    int getVersionCode();
+
+    @NonNull
+    File getSplitFolder();
 }
